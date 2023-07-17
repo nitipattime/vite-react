@@ -1,12 +1,8 @@
 import * as React from 'react';
 import {
-  Grid,
   Box,
   Button,
   Modal,
-  TextField,
-  FormControl,
-  Typography,
 } from "@mui/material";
 
 const style = {
@@ -52,8 +48,6 @@ function ChildModal() {
     </React.Fragment>
   );
 }
-
-type Props = {}
 
 export default function Header() {
   const [open, setOpen] = React.useState(false);
