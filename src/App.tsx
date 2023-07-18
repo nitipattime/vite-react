@@ -2,6 +2,7 @@ import './App.css'
 import Header from './components/Header'
 import Album from './components/Album'
 import Nav from './components/Nav'
+import Person from './components/Person'
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <Nav />
       <Album />
+      <Person />
     </>
   )
 }
