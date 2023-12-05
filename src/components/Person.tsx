@@ -1,17 +1,17 @@
 import React from 'react';
 import axios from 'axios';
 
-const URL = "https://christmas-backend.vercel.app/api/detail";
+// const URL = "https://christmas-backend.vercel.app/api/detail";
 
-function Test() {
-  const [post, setPost] = React.useState(null);
+// function Test() {
+//   const [post, setPost] = React.useState(null);
 
-  React.useEffect(() => {
-    axios.get(URL).then((response) => {
-      setPost(response.data);
-    });
-  }, []);
-  console.log(post)
+//   React.useEffect(() => {
+//     axios.get(URL).then((response) => {
+//       setPost(response.data);
+//     });
+//   }, []);
+//   console.log(post)
 
   // if (!post) return null;
 
@@ -21,7 +21,7 @@ function Test() {
   //     <p>{post.T2}</p>
   //   </div>
   // );
-}
+// }
 
 export default class PersonList extends React.Component {
   state = {
@@ -36,7 +36,9 @@ export default class PersonList extends React.Component {
   componentDidMount() {
     void axios.get(`https://jsonplaceholder.typicode.com/users`)
       .then(res => {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         const persons = res.data;
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         this.setState({ persons });
       })
 
@@ -46,9 +48,13 @@ export default class PersonList extends React.Component {
         // console.log(res);
         // console.log(res.data);
         // console.log(res.data.T1);
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
         const detailT1 = res.data.T1;
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         this.setState({ detailT1 });
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
         const detailT2 = res.data.T2;
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         this.setState({ detailT2 });
       });
 
@@ -58,9 +64,13 @@ export default class PersonList extends React.Component {
         // console.log(res);
         // console.log(res.data);
         // console.log(res.data.T1);
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
         const array1 = res.data.array;
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         this.setState({ array1 });
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
         const array2 = res.data.struct;
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         this.setState({ array2 });
       });
 
